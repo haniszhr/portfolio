@@ -1,0 +1,326 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+
+  overflow-x: hidden;
+
+  background: #0b0f19;
+
+  color: white;
+}
+
+/* =========================
+   INTRO / END SECTION
+========================= */
+
+.intro-section,
+.end-section {
+  height: 100vh;
+
+  background: linear-gradient(135deg, #111827, #020617);
+}
+
+.intro-section h1 {
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+/* =========================
+   SKILL SECTION
+========================= */
+
+#skillSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.skill-container {
+  width: 400px;
+  height: 400px;
+  overscroll-behavior: contain;
+  position: relative;
+}
+
+/* =========================
+   SVG CIRCLE
+========================= */
+
+.skill-circle {
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+
+  stroke: rgba(255, 255, 255, 0.12);
+
+  stroke-width: 12;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: #38bdf8;
+  stroke-width: 14;
+  stroke-linecap: round;
+  /*circumference:;
+  2xpix230=1445*/
+  stroke-dasharray: 1445;
+  stroke-dashoffset: 1445;
+  filter: drop-shadow(0 0 15px #38bdf8);
+  -webkit-filter: drop-shadow(0 0 15px #38bdf8);
+}
+
+/* =========================
+   CENTER
+========================= */
+
+.circle-center {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle-center h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.circle-center span {
+  color: #94a3b8;
+}
+
+/* =========================
+   SKILL CARD
+========================= */
+
+.skill-card {
+  position: absolute;
+  color: white;
+  width: 120px;
+  padding: 12px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card h5 {
+  color: #38bdf8;
+
+  font-weight: 700;
+}
+
+.skill-card p {
+  font-size: 0.85rem;
+
+  color: #cbd5e1;
+
+  margin: 0;
+}
+
+/*
+=================================================
+CLOCK POSITIONS
+
+12 skills around circle
+=================================================
+*/
+
+/* 12 o'clock */
+.skill-0 {
+  top: -43px;
+
+  left: 44%;
+
+  transform: translateX(-50%) scale(0.5);
+}
+
+/* 1 o'clock */
+.skill-1 {
+  top: 10px;
+
+  right: 45px;
+}
+
+/* 2 o'clock */
+.skill-2 {
+  top: 70px;
+
+  right: -20px;
+}
+
+/* 3 o'clock */
+.skill-3 {
+  top: 50%;
+
+  right: -60px;
+
+  transform: translateY(-50%) scale(0.5);
+}
+
+/* 4 o'clock */
+.skill-4 {
+  bottom: 70px;
+
+  right: -27px;
+}
+
+/* 5 o'clock */
+.skill-5 {
+  bottom: 10px;
+  right: 13px;
+}
+
+/* 6 o'clock */
+.skill-6 {
+  bottom: -35px;
+  left: 49%;
+  transform: translateX(-50%) scale(0.5);
+}
+
+/* 7 o'clock */
+.skill-7 {
+  bottom: 51px;
+  left: -14px;
+}
+
+/* 8 o'clock */
+.skill-8 {
+  bottom: 137px;
+  left: -94px;
+}
+
+/* 9 o'clock */
+.skill-9 {
+  top: 30%;
+  left: -90px;
+  transform: translateY(-50%) scale(0.5);
+}
+
+/* 10 o'clock */
+.skill-10 {
+  top: 56px;
+  left: -51px;
+}
+
+/* 11 o'clock */
+.skill-11 {
+  top: 0px;
+  left: 9px;
+}
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .skill-container {
+    width: 340px;
+
+    height: 340px;
+  }
+
+  .skill-circle {
+    width: 340px;
+
+    height: 340px;
+  }
+
+  .circle-center h2 {
+    font-size: 2rem;
+  }
+
+  .skill-card {
+    width: 120px;
+
+    padding: 10px;
+
+    font-size: 0.7rem;
+  }
+
+  .skill-card p {
+    display: none;
+  }
+}
+
+/* .skill-circle {
+  transform: translate(0, 0);
+} */
+
+@media (max-width: 768px) {
+  .skill-circle {
+    transform: translate(-40px, 45px);
+    -webkit-transform: translate(-40px, 45px);
+    -moz-transform: translate(-40px, 45px);
+    -ms-transform: translate(-40px, 45px);
+    -o-transform: translate(-40px, 45px);
+  }
+  .skill-0 {
+    top: 10px;
+    left: 50%;
+  }
+  .skill-1 {
+    top: 50px;
+    left: 60%;
+  }
+  .skill-2 {
+    top: 100px;
+    left: 70%;
+  }
+  .skill-3 {
+    top: 180px;
+    left: 70%;
+  }
+  .skill-4 {
+    top: 230px;
+    left: 70%;
+  }
+  .skill-5 {
+    bottom: 30px;
+    right: 25px;
+  }
+  .skill-6 {
+    bottom: 15px;
+    left: 49%;
+  }
+  .skill-7 {
+    bottom: 51px;
+    left: 0px;
+  }
+  .skill-8 {
+    bottom: 110px;
+    left: -15px;
+  }
+  .skill-9 {
+    top: 45%;
+    left: -18px;
+  }
+  .skill-10 {
+    top: 80px;
+    left: 0px;
+  }
+  .skill-11 {
+    top: 35px;
+    left: 20px;
+  }
+}
