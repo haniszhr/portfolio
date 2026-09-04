@@ -3,6 +3,7 @@ import SectionTitle from "../components/Title";
 import downloadicon from "../assets/download.png";
 import { handleDownload, handlePopup, handleSubmit } from "../main";
 import coding from "../assets/woman-coding.png";
+import cvFile from "../assets/Resume-Hanis.pdf";
 function Home() {
   return (
     <section className="home">

@@ -32,21 +32,30 @@ export default function Header() {
 
                 {/* Social Links */}
                 <div className="profile-links">
-                  <a href="#" className="portfolio-link">
+                  <a
+                    href="https://github.com/haniszhr"
+                    className="portfolio-link"
+                  >
                     <div className="black-circle">
                       <img src={github} alt="Github" />
                     </div>
                     <span className="text-white">Github</span>
                   </a>
 
-                  <a href="#" className="portfolio-link">
+                  <a
+                    href="https://wa.me/601155013353"
+                    className="portfolio-link"
+                  >
                     <div className="black-circle">
                       <img src={wsp} alt="Whatsapp" />
                     </div>
                     <span className="text-white">Whatsapp</span>
                   </a>
 
-                  <a href="#" className="portfolio-link">
+                  <a
+                    href="mailto:haniszahira19@gmail.com"
+                    className="portfolio-link"
+                  >
                     <div className="black-circle">
                       <img src={mail} alt="Email" />
                     </div>

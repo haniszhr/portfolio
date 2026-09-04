@@ -2,13 +2,12 @@ export function handleDownload(file) {
   const link = document.createElement("a");
 
   link.href = file;
-  link.download = "My-CV.pdf";
+  link.download = "Resume-Hanis.pdf";
 
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 }
-
 export function handlePopup() {
   console.log("Open popup!");
 }
